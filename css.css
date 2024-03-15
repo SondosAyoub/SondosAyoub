@@ -1,0 +1,254 @@
+.feed-form {
+    margin: 85px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    }
+
+.feed-form input {
+    height: 54px;
+    border-radius: 5px;
+    background: white;
+    margin-bottom: 15px;
+    border: 20px;
+    padding:  5 20px;
+    font-weight: 300;
+    font-size: 14px;
+    color: #4B4B4B;
+    }
+
+.button_submit:hover, .feed-form input:hover , .button_submit2:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 3px 0px #3e82c7;
+    }
+
+.button_submit {
+    width: 100%;
+    height: 54px;
+    font-size: 14px;
+    color: white;
+    background: #000000;
+    border-radius: 5px;
+    border: none;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.rating:not(:checked) > input {
+    position: absolute;
+    appearance: none;
+}
+
+.rating:not(:checked) > label {
+    margin-left: 38px;
+    cursor: pointer;
+    font-size: 30px;
+    color: #666;
+}
+
+.rating:not(:checked) > label:before {
+    content: "★";
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: #e58e09;
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: #ff9e0b;
+}
+
+.rating > input:checked ~ label {
+    color: #ffa723;
+}
+
+.button_submit2 {
+    width: 100%;
+    height: 54px;
+    font-size: 14px;
+    color: white;
+    background: #3118bb;
+    border-radius: 5px;
+    border: none;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.button_submit3 {
+    width: 100%;
+    height: 25px;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.509);
+    background: #232020;
+    border-radius: 5px;
+    border: 5px;
+    margin-bottom: 3px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.table{
+    background-image: url(vecteezy_tacos-with-meat-and-vegetables-on-a-black-background-with_23186683.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.card {
+    width: 190px;
+    height: 254px;
+    transition: all 0.2s;
+    position: relative;
+    cursor: pointer;
+}
+.card-inner {
+    width: inherit;
+    height: inherit;
+    background: rgba(255,255,255,.05);
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+}
+.card:hover {
+    transform: scale(1.04) rotate(1deg);
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(#2f4898, #1e566e);
+    border-radius: 50%;
+    position: absolute;
+    animation: move-up6 2s ease-in infinite alternate-reverse;
+}
+
+.circle:nth-child(1) {
+    top: -25px;
+    left: -25px;
+}
+
+.circle:nth-child(2) {
+    bottom: -25px;
+    right: -25px;
+    animation-name: move-down1;
+}
+    @keyframes move-up6 {
+    to {
+    transform: translateY(-10px);
+    }
+}
+@keyframes move-down1 {
+    to {
+        transform: translateY(10px);
+    }
+}
+.messageBox {
+    margin: 38px;
+    width: fit-content;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2d2d2d;
+    padding: 0 15px;
+    border-radius: 10px;
+    border: 1px solid rgb(63, 63, 63);
+}
+.messageBox:focus-within {
+    border: 1px solid rgb(110, 110, 110);
+}
+.fileUploadWrapper {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#file {
+    display: none;
+
+}
+.fileUploadWrapper label {
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.fileUploadWrapper label svg {
+    height: 18px;
+}
+.fileUploadWrapper label svg path {
+    transition: all 0.3s;
+}
+.fileUploadWrapper label svg circle {
+    transition: all 0.3s;
+}
+.fileUploadWrapper label:hover svg path {
+    stroke: #fff;
+}
+.fileUploadWrapper label:hover svg circle {
+    stroke: #fff;
+    fill: #3c3c3c;
+}
+.fileUploadWrapper label:hover .tooltip {
+    display: block;
+    opacity: 1;
+}
+.tooltip {
+    position: absolute;
+    top: -40px;
+    display: none;
+    opacity: 0;
+    color: white;
+    font-size: 10px;
+    text-wrap: nowrap;
+    background-color: #000;
+    padding: 6px 10px;
+    border: 1px solid #3c3c3c;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.596);
+    transition: all 0.3s;
+}
+#messageInput {
+    width: 200px;
+    height: 100%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+    color: white;
+    }
+#messageInput:focus ~ #sendButton svg path,
+#messageInput:valid ~ #sendButton svg path {
+    fill: #3c3c3c;
+    stroke: white;
+}
+
+#sendButton {
+    width: fit-content;
+    height: 100%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+#sendButton svg {
+    height: 18px;
+    transition: all 0.3s;
+}
+#sendButton svg path {
+    transition: all 0.3s;
+}
+#sendButton:hover svg path {
+    fill: #3c3c3c;
+    stroke: white;
+}
